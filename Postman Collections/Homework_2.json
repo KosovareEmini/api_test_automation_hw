@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "3fb0f4c3-a43d-46b1-b96a-a992322f22f0",
+		"name": "Homework 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new order",
+			"id": "d73a3da4-273c-4a04-859e-23dc7b8d86a9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 4,\n  \"petId\": 2,\n  \"quantity\": 10,\n  \"shipDate\": \"2023-12-10T00:38:30.696Z\",\n  \"status\": \"avaliable\",\n  \"complete\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/store/order"
+			},
+			"response": []
+		},
+		{
+			"name": "Get order by ID",
+			"id": "9203fa57-4bbd-4ea6-b5e2-a3b3195b5dd7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/store/order/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new user",
+			"id": "d09484b2-604e-41a6-8a88-3f7c75ed273c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 2,\n  \"username\": \"john\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@test.com\",\n  \"password\": \"password\",\n  \"phone\": \"000333\",\n  \"userStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate the user",
+			"id": "a1a4c768-1804-4834-aecb-7fc1225deaaa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "john"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://petstore.swagger.io/v2/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a  new pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "56314337-3cff-4c24-88cd-657430ce05a4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "29e69bbf-299d-449c-9fba-4becb920834d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 2,\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a pet",
+			"id": "00613aa5-3de1-4988-9950-0553c5e472e9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/pet/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Find pet by ID",
+			"id": "247e6a3b-80bd-4fdd-afed-7c191999a11c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/pet/2"
+			},
+			"response": []
+		}
+	]
+}
